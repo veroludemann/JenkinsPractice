@@ -1,0 +1,7 @@
+Jenkins -> Framework (lo usaremos como servidor) "Jenkins, el servidor de automatización de código abierto líder, proporciona Cientos de complementos para respaldar la creación, implementación y automatización cualquier proyecto. "
+
+Documentacion: 
+https://www.jenkins.io/doc/
+https://blog.nicopaez.com/2019/06/03/manejo-de-parametros-de-deployment-en-jenkins/
+
+paralizacion o testeo en paralalo
