@@ -45,9 +45,6 @@ jenkins stop (para "apagar el sistema")
     - Configurar Github
     - Configurar NodeJS
 
-    
-    - 
-
 3 - Crear una nueva tarea:
    - En la página principal de Jenkins, hacer clic en "Nuevo elemento".
    - Asignar un nombre al trabajo y seleccionar el tipo de proyecto (por ejemplo, "Proyecto Freestyle").
