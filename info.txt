@@ -4,4 +4,52 @@ Documentacion:
 https://www.jenkins.io/doc/
 https://blog.nicopaez.com/2019/06/03/manejo-de-parametros-de-deployment-en-jenkins/
 
-paralizacion o testeo en paralalo
+Paralizacion o testeo en paralalo -> Integracion continua
+Se van a simular equipos de trabajo para realizar pruebas en paralelo.
+
+REQUISITOS:
+- Tener instalado Jenkins en un servidor.
+- Tener Java 17 (cmd -java -version)
+- Tener variables de entorno configuradas:
+  6 JAVA_HOME
+- Tener el PATH configurado:
+  + JAVA_HOME/bin (%JAVA_HOME%\bin)
+
+1- Instalar Jenkins:
+   - Descargar el instalador de Jenkins desde la página oficial.
+   - Ejecutar el instalador y seguir las instrucciones.
+   - Una vez instalado, acceder a Jenkins a través del navegador en la dirección http://localhost:8080.
+   - Si es la primera vez que se accede, se solicitará una contraseña de administrador. Esta contraseña se puede encontrar en el archivo `secrets/initialAdminPassword` dentro del directorio de instalación de Jenkins.
+2- Configurar Jenkins:
+    - Una vez dentro de Jenkins, se recomienda instalar los plugins sugeridos.
+    - Configurar el usuario administrador y otros usuarios según sea necesario.
+    - Configurar las herramientas necesarias, como JDK, Maven, etc., en "Administrar Jenkins" -> "Configurar el sistema".
+
+DATO IMPORTANTE:
+Si se da el caso que apagamos el equipo y se desconecta el servidor, al reiniciar el equipo, Jenkins no se iniciará automáticamente. Para solucionarlo, se debe configurar Jenkins como un servicio de Windows o iniciar manualmente el servicio de Jenkins desde la consola de servicios.
+A- Ir al cmdr, dirigirse a la carpeta de instalación de Jenkins:
+"C:\Program Files\Jenkins" -> recordar hacer cd .. 
+B- Ejecutar el siguiente comando:
+jenkins start (para "prender el sistema")
+jenkins stop (para "apagar el sistema")
+
+-------------------Ya en Jenkins-------------------
+* Configuracion de Plugins:
+   - Ir a "Administrar Jenkins (ruedita)" -> "Plugins".
+   - En la pestaña "Disponible", buscar e instalar los plugins necesarios, como Github, Pipeline, etc.
+   - Reiniciar Jenkins si es necesario.
+
+* Configuracion Tools (Administrar Jenkins -> Tools):
+    - Configurar JDK:
+      En la sección "JDK", agregar una nueva instalación de JDK.
+    - Configurar Github
+    - Configurar NodeJS
+
+    
+    - 
+
+3 - Crear una nueva tarea:
+   - En la página principal de Jenkins, hacer clic en "Nuevo elemento".
+   - Asignar un nombre al trabajo y seleccionar el tipo de proyecto (por ejemplo, "Proyecto Freestyle").
+   - Configurar el repositorio de código fuente, los pasos de construcción y cualquier otro parámetro necesario.
+   - Guardar los cambios.
