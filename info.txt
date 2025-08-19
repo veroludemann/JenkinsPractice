@@ -50,3 +50,20 @@ jenkins stop (para "apagar el sistema")
    - Asignar un nombre al trabajo y seleccionar el tipo de proyecto (por ejemplo, "Proyecto Freestyle").
    - Configurar el repositorio de código fuente, los pasos de construcción y cualquier otro parámetro necesario.
    - Guardar los cambios.
+
+------------------------------------------------------------------------------------------
+MANOS A LA OBRA CON EL PROYECTO: integracion continua + cypress
+------------------------------------------------------------------------------------------
+1. Install cypress en el proyecto: 
+npm install cypress --save-dev 
+NOTA: para este proyecto voy a usar casos ya codeados anteriormente, por lo que es necesario instalar algunas cosas:
+npm install cypress-plugin-tab --save-dev
+npm install -D cypress-xpath
+
+2. Configurar panel de control (dashboard de cy)
+A. Loguearse con una cuenta de gmal
+B. Seguir los pasos para crear un nuevo proyecto.
+C. Asociar el proyecto y verificar que se agregue el codigo en el archivo `cypress.config.js` /en este caso: projectId: 'vgzyfu',/.
+
+Tener en cuenta -> "npx cypress run --record --key 0a5699de-7ca0-4403-90fa-cd47f128d2c2"
+
